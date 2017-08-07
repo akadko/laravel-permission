@@ -187,7 +187,7 @@ trait HasRoles
      */
     protected function hasPermissionViaRole(Permission $permission)
     {
-        return $this->hasRole($permission->roles);
+        return $this->hasRole($permission->roles()->get());
     }
 
     /**
