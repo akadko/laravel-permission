@@ -250,7 +250,7 @@ trait HasRoles
      */
     protected function hasPermissionViaRole(Permission $permission): bool
     {
-        return $this->hasRole($permission->roles);
+        return $this->hasRole($permission->roles()->get());
     }
 
     /**
